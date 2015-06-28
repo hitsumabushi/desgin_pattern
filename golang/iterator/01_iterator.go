@@ -1,3 +1,5 @@
+"implement iterator pattern"
+
 package main
 
 import "fmt"

@@ -1,0 +1,30 @@
+digraph iterator {
+  graph [fontname = "monospace", fontsize = 10, rankdir = TD, nodesep = 0.5];
+  node  [fontname = "monospace", fontsize = 10];
+  edge  [fontname = "monospace", fontsize = 10];
+
+  // node
+  node [shape = record];
+  Aggregator [label="{Aggregator||Interface()\l}", group=left]
+  BookShelf [label="{BookShelf|books\l
+last\l|BookAt(int) Book\l\
+AppendBook(Book)\l\
+Vokumes() int\l\
+Iterator() Iterator\l}", group=left]
+  Book [label="{Book|name\l|Name() string\l}", group=left]
+  Iterator [label="{Iterator||hasNext() bool\lnext() interface\{\}}", group=right]
+  BookShelfIterator[label="{BookShelfIterator|bookShelf *BookShelf\lindex int\l|\
+hasNext() bool\lnext() interface\{\}\l}", group=right]
+
+  // edge
+  edge [arrowhead = none];
+  Aggregator -> BookShelf [arrowhead = none, arrowtail = ornormal, dir = both];
+  BookShelf -> Book [arrowhead = open, arrowtail = odiamond, dir = both];
+  Iterator -> BookShelfIterator [arrowhead = none, arrowtail = ornormal, dir = both];
+  Aggregator -> Iterator [label = "Creates\ ▶", arrowhead = vee];
+  BookShelf -> BookShelfIterator [arrowhead = odiamond, arrowtail = open, dir = both];
+
+  // rank
+  {rank = same; Aggregator; Iterator}
+  {rank = same; BookShelf; BookShelfIterator}
+}
