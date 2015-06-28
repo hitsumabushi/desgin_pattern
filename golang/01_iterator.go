@@ -78,8 +78,15 @@ func main() {
 	bs := &BookShelf{books, len(books)}
 	bs.AppendBook(Book{"appended book"})
 	bsi := bs.Iterator()
-	for book := bsi.next(); book != nil; book = bsi.next() {
+	// pattern 1
+	var book Book
+	for bsi.hasNext() {
+		book = bsi.next().(Book)
 		fmt.Printf("%#v\n", book)
 	}
+	// pattern 2
+	//for book = bsi.next(); book != nil; book = bsi.next() {
+	//	fmt.Printf("%#v\n", book)
+	//}
 	fmt.Printf("Volumes: %#d\n", bs.Volumes())
 }
