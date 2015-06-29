@@ -18,9 +18,9 @@ hasNext() bool\lnext() interface\{\}\l}", group=right]
 
   // edge
   edge [arrowhead = none];
-  Aggregator -> BookShelf [arrowhead = none, arrowtail = ornormal, dir = both];
+  Aggregator -> BookShelf [arrowhead = none, arrowtail = onormal, dir = both];
   BookShelf -> Book [arrowhead = open, arrowtail = odiamond, dir = both];
-  Iterator -> BookShelfIterator [arrowhead = none, arrowtail = ornormal, dir = both];
+  Iterator -> BookShelfIterator [arrowhead = none, arrowtail = onormal, dir = both];
   Aggregator -> Iterator [label = "Creates\ ▶", arrowhead = vee];
   BookShelf -> BookShelfIterator [arrowhead = odiamond, arrowtail = open, dir = both];
 

@@ -34,7 +34,7 @@
 <!-- Aggregator&#45;&gt;BookShelf -->
 <g id="edge1" class="edge"><title>Aggregator&#45;&gt;BookShelf</title>
 <path fill="none" stroke="black" d="M55,-229.798C55,-219.33 55,-207.801 55,-196.757"/>
-<polygon fill="none" stroke="black" points="55,-239.855 58.5001,-229.855 55.0001,-229.855 55,-239.855"/>
+<polygon fill="none" stroke="black" points="51.5001,-229.855 55,-239.855 58.5001,-229.855 51.5001,-229.855"/>
 </g>
 <!-- Iterator -->
 <g id="node4" class="node"><title>Iterator</title>
@@ -87,7 +87,7 @@
 <!-- Iterator&#45;&gt;BookShelfIterator -->
 <g id="edge3" class="edge"><title>Iterator&#45;&gt;BookShelfIterator</title>
 <path fill="none" stroke="black" d="M242,-224.026C242,-211.491 242,-197.904 242,-185.681"/>
-<polygon fill="none" stroke="black" points="242,-234.254 245.5,-224.254 242,-224.254 242,-234.254"/>
+<polygon fill="none" stroke="black" points="238.5,-224.254 242,-234.254 245.5,-224.254 238.5,-224.254"/>
 </g>
 </g>
 </svg>
