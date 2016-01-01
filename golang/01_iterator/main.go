@@ -1,4 +1,4 @@
-"implement iterator pattern"
+/* implement iterator pattern */
 
 package main
 
