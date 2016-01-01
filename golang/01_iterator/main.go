@@ -37,7 +37,7 @@ type Aggregate interface {
 	iterator() *Iterator
 }
 
-// represent iteratable bookshelf
+// bookshelf : iteratable
 type BookShelf struct {
 	books []Book
 	last  int

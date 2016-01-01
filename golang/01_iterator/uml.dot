@@ -9,7 +9,7 @@ digraph iterator {
   BookShelf [label="{BookShelf|books\l
 last\l|BookAt(int) Book\l\
 AppendBook(Book)\l\
-Vokumes() int\l\
+Volumes() int\l\
 Iterator() Iterator\l}", group=left]
   Book [label="{Book|name\l|Name() string\l}", group=left]
   Iterator [label="{Iterator||hasNext() bool\lnext() interface\{\}}", group=right]
