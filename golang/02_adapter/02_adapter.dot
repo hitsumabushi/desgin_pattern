@@ -6,8 +6,8 @@ digraph iterator {
   // nodes
   Main [label = "Main"];
   Print [label = "{\<\<interface\>\>\lPrint||printWeak\lprintStrong}"];
-  PrintBanner [label = "{PrintBanner||printWeak\lprintStrong}"];
-  Banner [label = "{Banner||showWithParen\lshowWithAster}"];
+  PrintBanner [label = "{PrintBanner|banner|printWeak\lprintStrong}"];
+  Banner [label = "{Banner|str string|showWithParen\lshowWithAster}"];
 
   //edges
   Main -> Print [label = "Uses\ ▶", arrowhead = open];
