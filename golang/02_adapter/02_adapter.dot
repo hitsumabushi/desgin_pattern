@@ -1,0 +1,19 @@
+digraph iterator {
+  // styles
+  node [shape = record];
+  edge [arrowhead = none];
+
+  // nodes
+  Main [label = "Main"];
+  Print [label = "{\<\<interface\>\>\lPrint||printWeak\lprintStrong}"];
+  PrintBanner [label = "{PrintBanner||printWeak\lprintStrong}"];
+  Banner [label = "{Banner||showWithParen\lshowWithAster}"];
+
+  //edges
+  Main -> Print [label = "Uses\ ▶", arrowhead = open];
+  Print -> PrintBanner [arrowhead = none, arrowtail = onormal, dir = both, style = dotted];
+  PrintBanner -> Banner [arrowhead = onormal];
+
+  // rank
+  {rank = same; Print; PrintBanner; Banner};
+}
