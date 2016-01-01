@@ -1,4 +1,4 @@
-digraph iterator {
+digraph adapter {
   // styles
   node [shape = record];
   edge [arrowhead = none];
