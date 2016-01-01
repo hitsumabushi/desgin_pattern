@@ -1,0 +1,18 @@
+digraph template_method {
+  // styles
+  graph [conncentrate = true];
+  node [shape = record];
+  edge [arrowhead = none];
+
+  // nodes
+  AbstractDisplay [label = "{AbstractDisplay||open\lprint\lclose\ldisplay\l}"];
+  CharDisplay [label = "{CharDisplay||open\lprint\lclose\l}"];
+  StringDisplay [label = "{StringDisplay||open\lprint\lclose\lprintLine\l}"];
+
+  // edges
+  AbstractDisplay -> CharDisplay   [arrowtail = onormal, dir = both];
+  AbstractDisplay -> StringDisplay [arrowtail = onormal, dir = both];
+
+  // rank
+  {rank = same; CharDisplay; StringDisplay};
+}
