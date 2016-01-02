@@ -25,6 +25,6 @@ test_coveralls: deps_coveralls
 	@# gocovmerge .profiles/* > coverage.out
 	@#${HOME}/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken ${COVERALLS_TOKEN}
 	@# Pattern 2
-	@#${HOME}/gopath/bin/goveralls -service=travis-ci -repotoken ${COVERALLS_TOKEN} ./...
+	@${HOME}/gopath/bin/goveralls -service=travis-ci -repotoken ${COVERALLS_TOKEN} ./...
 
 .PHONY: default ci before_deps deps test
