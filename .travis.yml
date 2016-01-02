@@ -1,27 +1,22 @@
 language: go
 sudo: false
 go:
-  - 1.5
-  - tip
-
-# For cover all
+- 1.5
+- tip
 before_install:
-  - make deps_coveralls
-
+- make deps_coveralls
 install:
-  - make deps
-
+- make deps
 script:
-  - make ci
-
+- make ci
 branches:
   only:
-    - master
-
+  - master
 matrix:
   fast_finish: true
   allow_failures:
-    - go: tip
-
+  - go: tip
 notifications:
   email: false
+  slack:
+    secure: LaYD6WPQMna2DRAUUhJ0nj5atxucMiECEDzkkRE3fTr0i7Ulb0WNMMcXUMFkjIaVly9gapdudkRJZ665NpvO2bLxEBKjuswT6hepx75WN50UBXwwSpd4EzuSKlbnciMMoU5yhHPyBP5ZkieZFqPeHvtugrQd3qcDYNxbMvMFr1MewLBYmY3dT+092IRISnVbpjZTXMYWj09bZuBk6K4V1oZCIcN0JGwlvrmiuy1+nWVBlaYrYMU88n13Q3DoKvR3/4ugu/UNuoOz+8+t6zNRyT5vqUn8K+RqGSm6/6J9lMgYFkvDOMDLECKKBNGYi8y2L+xHEshM3zDeWImJKGxSkJn2PmHvEDS3uOEnB20Osvkpbp0mn7y4QzStz9if+QeYgTVsv3c1DEp0i3lyIziigiUUPnuT5AayC9ycLls1Gzjc3jlxo6UOMGI5CiV4zBLVmEgVFhG/Vu9LsuAVtNK2ExofTkl1BjVk3xo3Pk/g2LR8dxgpAwAqZVMwVJZg07k7ruCoJYkMuYyXt2bJnTleNGZRig2J4vvMrQReipTUjNpuG84DRAxcqjSWraEey3A5ahEAkQSdsSKUFlW25QbzNfJMevpbwPpG+JtTAOgqbkJwWQG+gAh9dUSzCcg77P+HZ5NIpG3ElzwPk6bUlddJQh0rgiuYqqlZDXV0GsxBNdw=
