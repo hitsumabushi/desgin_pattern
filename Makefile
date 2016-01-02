@@ -17,10 +17,10 @@ test: deps
 deps_coveralls:
 	go get github.com/axw/gocov/gocov
 	go get github.com/mattn/goveralls
-	if ! go get github.com/golang/tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
+	go get golang.org/x/tools/cmd/cover
 
 test_coveralls: deps_coveralls
-	$HOME/gopath/bin/goveralls -service=travis-ci
-
+	go test -v -covermode=count -coverprofile=coverage.out
+	$HOME/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken $COVERALLS_TOKEN
 
 .PHONY: default ci before_deps deps test
