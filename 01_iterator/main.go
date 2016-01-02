@@ -90,5 +90,5 @@ func main() {
 	//for book = bsi.next(); book != nil; book = bsi.next() {
 	//	fmt.Printf("%#v\n", book)
 	//}
-	fmt.Printf("Volumes: %#d\n", bs.Volumes())
+	fmt.Printf("Volumes: %#v\n", bs.Volumes())
 }
