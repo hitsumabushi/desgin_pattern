@@ -1,0 +1,24 @@
+language: go
+sudo: false
+go:
+  - 1.5
+  - tip
+
+# For cover all
+before_install:
+  - make deps_coveralls
+
+install:
+  - make deps
+
+script:
+  - make ci
+
+branches:
+  only:
+    - master
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - go: tip
