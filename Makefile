@@ -15,16 +15,11 @@ test: deps
 
 # For Coveralls.io
 deps_coveralls:
+	go get github.com/axw/gocov/gocov
 	go get github.com/mattn/goveralls
 	go get golang.org/x/tools/cmd/cover
-	go get github.com/wadey/gocovmerge
 
 test_coveralls: deps_coveralls
-	@# Pattern 1
-	@# find . -type d -regex "^./[^.].*" | xargs -I {} go test -v -covermode=count -coverprofile=.profiles/{}_coverage.out {}
-	@# gocovmerge .profiles/* > coverage.out
-	@#${HOME}/gopath/bin/goveralls -coverprofile=coverage.out -service=travis-ci -repotoken ${COVERALLS_TOKEN}
-	@# Pattern 2
 	@${HOME}/gopath/bin/goveralls -service=travis-ci -repotoken ${COVERALLS_TOKEN} ./...
 
 .PHONY: default ci before_deps deps test
