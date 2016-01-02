@@ -19,7 +19,7 @@ deps_coveralls:
 	go get github.com/mattn/goveralls
 	if ! go get github.com/golang/tools/cmd/cover; then go get golang.org/x/tools/cmd/cover; fi
 
-test_coveralls: desp_coveralls
+test_coveralls: deps_coveralls
 	$HOME/gopath/bin/goveralls -service=travis-ci
 
 
