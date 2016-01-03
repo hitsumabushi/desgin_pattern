@@ -21,8 +21,9 @@ func (self *Manager) Create(name string) (product, error) {
 	result, ok := self.showcase[name]
 	if !ok {
 		err = errors.New("Not registerd")
+		return nil, err
 	}
-	return result, err
+	return result.clone(), nil
 }
 
 type LinePen struct {
