@@ -1,6 +1,6 @@
 package prototype
 
-import "github.com/hitsumabushi/go/src/errors"
+import "errors"
 
 // clone()はManagerにcloneの役割を一任したい場合には、unexportedにしておく
 type product interface {
